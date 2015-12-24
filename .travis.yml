@@ -1,0 +1,3 @@
+language: cpp
+install: true
+script: mkdir build && cd build && cmake .. && make && ./BoostOptionsExample -i=1 -o=2
