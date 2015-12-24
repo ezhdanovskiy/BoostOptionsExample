@@ -1,3 +1,9 @@
 language: cpp
+
 install: true
+
+before_script:
+  - sudo apt-get update -qq
+  - sudo apt-get install libboost-options
+
 script: mkdir build && cd build && cmake .. && make && ./BoostOptionsExample -i=1 -o=2
