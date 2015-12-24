@@ -13,7 +13,8 @@ int main(int argc, char **argv) {
         desc.add_options()
                 ("input-file,i", po::value<std::string>(&fileNameIn)->required(), "Input file name")
                 ("block-size,b", po::value<size_t>(&blockSize)->default_value(1024 * 1024), "Block size")
-                ("analyzeEventTypes", "Produce help message")
+                ("analyzeUniqueUsers", "Count unique users")
+                ("makeUsersFlow", "Creates users flow and NAMED_DUMP it")
                 ("help", "Produce help message");
         po::variables_map vm;
         po::store(po::parse_command_line(argc, argv, desc), vm);
