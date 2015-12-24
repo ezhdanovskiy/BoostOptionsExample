@@ -12,16 +12,24 @@ int main(int argc, char **argv) {
     try {
         desc.add_options()
                 ("input-file,i", po::value<std::string>(&fileNameIn)->required(), "Input file name")
-                ("output-file,o", po::value<std::string>(&fileNameOut)->required(), "Output file name")
                 ("block-size,b", po::value<size_t>(&blockSize)->default_value(1024 * 1024), "Block size")
+                ("analyzeEventTypes", "Produce help message")
                 ("help", "Produce help message");
         po::variables_map vm;
         po::store(po::parse_command_line(argc, argv, desc), vm);
+
         if (vm.count("help")) {
-            std::cout << desc << "\n";
-            return 1;
+            std::cout << desc;
+            return 0;
         }
+
         po::notify(vm);
+
+        if (vm.count("analyzeEventTypes")) {
+            std::cout << "analyzeEventTypes" << std::cout;
+            return 0;
+        }
+
         return 0;
     }
     catch (const po::error &e) {
