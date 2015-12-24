@@ -27,10 +27,10 @@ int main(int argc, char **argv) {
         po::notify(vm);
 
         if (vm.count("analyzeUniqueUsers")) {
-            std::cout << "do analyzeUniqueUsers" << std::cout;
+            std::cout << "do analyzeUniqueUsers" << std::endl;
         }
         if (vm.count("makeUsersFlow")) {
-            std::cout << "do makeUsersFlow" << std::cout;
+            std::cout << "do makeUsersFlow" << std::endl;
         }
 
         return 0;
