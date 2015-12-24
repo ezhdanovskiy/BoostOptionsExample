@@ -26,9 +26,11 @@ int main(int argc, char **argv) {
 
         po::notify(vm);
 
-        if (vm.count("analyzeEventTypes")) {
-            std::cout << "analyzeEventTypes" << std::cout;
-            return 0;
+        if (vm.count("analyzeUniqueUsers")) {
+            std::cout << "do analyzeUniqueUsers" << std::cout;
+        }
+        if (vm.count("makeUsersFlow")) {
+            std::cout << "do makeUsersFlow" << std::cout;
         }
 
         return 0;
