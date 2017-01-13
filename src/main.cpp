@@ -10,10 +10,10 @@ int main(int argc, char **argv) {
     po::options_description desc("Allowed options");
     try {
         desc.add_options()
-//                ("input-file,i", po::value<std::string>(&fileNameIn)->required(), "Input file name")
-//                ("block-size,b", po::value<size_t>(&blockSize)->default_value(1024 * 1024), "Block size")
-//                ("analyzeUniqueUsers", "Count unique users")
-//                ("makeUsersFlow", "Creates users flow and NAMED_DUMP it")
+                ("input-file,i", po::value<std::string>(&fileNameIn)->required(), "Input file name")
+                ("block-size,b", po::value<size_t>(&blockSize)->default_value(1024 * 1024), "Block size")
+                ("analyzeUniqueUsers", "Count unique users")
+                ("makeUsersFlow", "Creates users flow and NAMED_DUMP it")
                 ("opt", po::value<std::vector<std::string> >()->multitoken(), "description")
                 ("help", "Produce help message");
         po::variables_map vm;
